@@ -19,10 +19,10 @@ public class gunMechanics : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
             GameObject firedBullet = Instantiate(bulletObject);
-            firedBullet.AddComponent<bullet>();
-            firedBullet.GetComponent<bullet>().bulletSpeed = bulletSpeed;
-            firedBullet.transform.rotation = gameObject.transform.rotation;
-            firedBullet.transform.position = gameObject.transform.GetChild(0).position;
+            firedBullet.AddComponent<bullet>();//adds the bullets functionality
+            firedBullet.GetComponent<bullet>().bulletSpeed = bulletSpeed;//sets the bullet speed 
+            firedBullet.transform.rotation = gameObject.transform.rotation;//set the rotation
+            firedBullet.transform.position = gameObject.transform.GetChild(0).position; //moves the bullet to the mussel
         }
     }
 
